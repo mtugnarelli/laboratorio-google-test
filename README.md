@@ -1,4 +1,4 @@
-laboratorio-google-test
-=======================
+# Laboratorio
 
-Laboratorio: Uso de Google C++ Testing Framework
+## Uso de Google C++ Testing Framework
+
