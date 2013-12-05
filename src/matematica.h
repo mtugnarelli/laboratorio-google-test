@@ -1,10 +1,3 @@
-/*
- * matematica.h
- *
- *  Created on: Dec 4, 2013
- *      Author: mtugnarelli
- */
-
 #ifndef MATEMATICA_H_
 #define MATEMATICA_H_
 
