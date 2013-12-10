@@ -1,6 +1,7 @@
 
-#include "gtest/gtest.h"
-#include "matematica.h"
+#include <gtest/gtest.h>
+#include <matematica.h>
+#include <string>
 
 TEST(MatematicaTest, factorialDe0) {
 
@@ -31,3 +32,13 @@ TEST(MatematicaTest, factorialDe20) {
 
     ASSERT_EQ(2432902008176640000, factorial(20));
 }
+
+TEST(MatematicaTest, factorialAPartirDe21GeneraExcepcion) {
+
+    ASSERT_NO_THROW(factorial(20)) << "Máximo argumento válido";
+    ASSERT_THROW(factorial(21), std::string) << "Supera el máximo argumento válido";
+    ASSERT_ANY_THROW(factorial(100));
+    ASSERT_ANY_THROW(factorial(259));
+}
+
+

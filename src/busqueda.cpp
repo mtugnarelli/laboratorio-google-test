@@ -5,7 +5,7 @@ int buscar(int valores[], int desde, int hasta, int valorBuscado) {
 
     int encontrado = -1;
 
-    while ((desde <= hasta) && (encontrado < 0)){
+    while ((desde <= hasta) && (encontrado < 0)) {
 
         int central = (desde + hasta) / 2;
 
