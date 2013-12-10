@@ -29,8 +29,23 @@ class BusquedaTest : public ::testing::Test {
         }
 };
 
-TEST_F(BusquedaTest, buscarValorCentral) {
+TEST_F(BusquedaTest, buscarValorLocalizadoEnElCentro) {
 
+    int posicion = buscar(this->valores, 0, 9, 49);
 
+    ASSERT_EQ(5, posicion)  << "Posición en la que se encontró el valor buscado";
 }
 
+TEST_F(BusquedaTest, buscarValorLocalizadoAlPrincipio) {
+
+    int posicion = buscar(this->valores, 0, 9, 4);
+
+    ASSERT_EQ(0, posicion) << "Posición en la que se encontró el valor buscado";
+}
+
+TEST_F(BusquedaTest, buscarValorInexistente) {
+
+    int posicion = buscar(this->valores, 0, 9, 12);
+
+    ASSERT_EQ(-1, posicion) << "No se encontró el valor";
+}
